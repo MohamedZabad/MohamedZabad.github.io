@@ -1,0 +1,75 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0f1a"/>
+      <stop offset="100%" stop-color="#08080d"/>
+    </linearGradient>
+    <radialGradient id="glowE1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowE2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bge)"/>
+  <circle cx="150" cy="120" r="320" fill="url(#glowE1)"/>
+  <circle cx="1050" cy="560" r="300" fill="url(#glowE2)"/>
+
+  <!-- summary cards -->
+  <g font-family="IBM Plex Sans, sans-serif">
+    <rect x="90" y="80" width="280" height="130" rx="16" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="118" y="128" font-size="16" fill="#8d8da3">Income</text>
+    <text x="118" y="168" font-size="30" font-weight="700" fill="#f2f2f7">$1,002,335</text>
+    <path d="M320,110 l10,-16 10,16 z" fill="#22d3ee"/>
+
+    <rect x="390" y="80" width="280" height="130" rx="16" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="418" y="128" font-size="16" fill="#8d8da3">Expenses</text>
+    <text x="418" y="168" font-size="30" font-weight="700" fill="#f2f2f7">$142,000</text>
+    <path d="M620,94 l10,16 10,-16 z" fill="#f472b6"/>
+
+    <rect x="690" y="80" width="280" height="130" rx="16" fill="#12101e" stroke="#22d3ee" stroke-opacity="0.55"/>
+    <text x="718" y="128" font-size="16" fill="#8d8da3">Current Balance</text>
+    <text x="718" y="168" font-size="30" font-weight="700" fill="#f2f2f7">$860,335</text>
+  </g>
+
+  <!-- bar chart -->
+  <g>
+    <rect x="120" y="470" width="60" height="120" rx="8" fill="url(#barGrad)" opacity="0.55"/>
+    <rect x="210" y="410" width="60" height="180" rx="8" fill="url(#barGrad)" opacity="0.7"/>
+    <rect x="300" y="450" width="60" height="140" rx="8" fill="url(#barGrad)" opacity="0.6"/>
+    <rect x="390" y="360" width="60" height="230" rx="8" fill="url(#barGrad)" opacity="0.85"/>
+    <rect x="480" y="320" width="60" height="270" rx="8" fill="url(#barGrad)"/>
+    <rect x="570" y="400" width="60" height="190" rx="8" fill="url(#barGrad)" opacity="0.75"/>
+    <rect x="660" y="440" width="60" height="150" rx="8" fill="url(#barGrad)" opacity="0.65"/>
+  </g>
+  <line x1="100" y1="600" x2="740" y2="600" stroke="#8d8da3" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- category chips -->
+  <g font-family="JetBrains Mono, monospace" font-size="14" fill="#c9c9e0">
+    <rect x="800" y="330" width="130" height="38" rx="19" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="865" y="354" text-anchor="middle">FOOD</text>
+
+    <rect x="800" y="380" width="150" height="38" rx="19" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="875" y="404" text-anchor="middle">TRANSPORT</text>
+
+    <rect x="800" y="430" width="140" height="38" rx="19" fill="#12101e" stroke="#22d3ee" stroke-opacity="0.4"/>
+    <text x="870" y="454" text-anchor="middle">HOUSING</text>
+
+    <rect x="960" y="330" width="150" height="38" rx="19" fill="#12101e" stroke="#22d3ee" stroke-opacity="0.4"/>
+    <text x="1035" y="354" text-anchor="middle">SAVINGS</text>
+
+    <rect x="960" y="380" width="120" height="38" rx="19" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="1020" y="404" text-anchor="middle">OTHER</text>
+  </g>
+
+  <!-- add transaction affordance -->
+  <rect x="800" y="490" width="310" height="52" rx="26" fill="url(#barGrad)" opacity="0.9"/>
+  <text x="955" y="524" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="#0a0a0f">+ Add Transaction</text>
+</svg>

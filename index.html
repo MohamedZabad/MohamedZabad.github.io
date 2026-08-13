@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Zabad — Embedded &amp; Systems Engineering</title>
+<meta name="description" content="Portfolio of Mohamed Zabad — embedded systems, networking, and backend projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="glow glow-1" aria-hidden="true"></div>
+<div class="glow glow-2" aria-hidden="true"></div>
+
+<header class="topbar">
+  <span class="logo">MZ<span class="dot" aria-hidden="true"></span></span>
+  <nav>
+    <a href="#about" data-nav="about">About</a>
+    <a href="#projects" data-nav="projects">Projects</a>
+    <a href="#skills" data-nav="skills">Skills</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="hero-id" data-reveal>
+      <div class="avatar">
+        <img src="assets/profile.jpg" alt="Mohamed Zabad">
+      </div>
+      <div class="hero-heading">
+        <p class="eyebrow">Student &mdash; embedded systems &amp; networking</p>
+        <h1>Mohamed Zabad</h1>
+      </div>
+    </div>
+    <p class="hero-sub" data-reveal>Building things that talk to hardware and to each other &mdash; from a Pico reading the air to full-stack apps built with a team.</p>
+    <div class="hero-links" data-reveal>
+      <a class="btn btn-primary" href="#projects">View projects</a>
+      <a class="btn" href="assets/Mohamed-Zabad-CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+      <a class="btn" href="https://github.com/MohamedZabad" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohamed-zabad-338274195/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+  </section>
+
+  <section class="section" id="about">
+    <p class="label" data-reveal>About</p>
+    <div class="section-body" data-reveal>
+      <p>I'm a university student who learns by wiring things up and breaking them on purpose. Most of my work sits at the point where software meets something physical or something else on the network &mdash; a sensor on a breadboard, a socket between two machines, a model doing the boring part of a job.</p>
+      <p>I like projects with a real feedback loop: flash the firmware, watch the serial monitor, fix the wiring, try again. Below is a working log of what that's produced so far.</p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <p class="label" data-reveal>Projects</p>
+
+    <div class="cards">
+
+      <article class="card" data-reveal data-expandable>
+        <img class="card-img" src="assets/art/vape-monitor-art.svg" alt="Stylized illustration of the vape detection sensor showing a sensor chip, radar pulse, and a console readout confirming vape detected at 92 percent confidence" loading="lazy">
+        <div class="card-summary">
+          <h3>Vape detection sensor</h3>
+          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">A Raspberry Pi Pico rig that reads particulate matter, gas resistance, temperature, humidity, and pressure, then feeds those readings into a machine-learning classifier that flags vape, smoke, or spray in real time with a confidence score.</p>
+          <table class="spec">
+            <tr><td>STACK</td><td>MicroPython, Python (classifier)</td></tr>
+            <tr><td>HARDWARE</td><td>Raspberry Pi Pico, PMS5003, gas sensor, breadboard build</td></tr>
+            <tr><td>DETAIL</td><td>UART parsing written from scratch, multi-class prediction (normal / smoke / spray / vape) with per-class probabilities</td></tr>
+          </table>
+          <a class="card-link" href="https://github.com/MohamedZabad/ai-vape-monitor" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+
+      <article class="card" data-reveal data-expandable>
+        <img class="card-img" src="assets/art/game-hub-art.svg" alt="Stylized illustration of the GameHub interface with a search bar and a grid of colorful game tiles" loading="lazy">
+        <div class="card-summary">
+          <h3>GameHub</h3>
+          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">A full-stack game browser pulling live data from the RAWG games API &mdash; search and filter by platform and genre, browse a free-to-play catalog, and save titles to a wishlist. Built as a learning project pairing a React frontend with a small Express API.</p>
+          <table class="spec">
+            <tr><td>STACK</td><td>React, React Router, Node.js, Express</td></tr>
+            <tr><td>DATA</td><td>RAWG games API</td></tr>
+            <tr><td>DETAIL</td><td>Platform/genre filtering, sortable results, wishlist add/remove, dedicated free games section</td></tr>
+          </table>
+          <a class="card-link" href="https://github.com/MohamedZabad/Proj" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+
+      <article class="card" data-reveal data-expandable>
+        <img class="card-img" src="assets/art/expense-tracker-art.svg" alt="Stylized illustration of the expense tracker dashboard with income, expenses, and balance cards, a bar chart, and category tags" loading="lazy">
+        <div class="card-summary">
+          <h3>Expense tracker</h3>
+          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">A full-stack expense tracker built with a small team &mdash; users log in, add and edit income/expense transactions, and see their spending broken down by category, month, and year on a dashboard with charts.</p>
+          <table class="spec">
+            <tr><td>ROLE</td><td>Collaborator</td></tr>
+            <tr><td>STACK</td><td>Node.js, Express, TypeScript, MySQL, React</td></tr>
+            <tr><td>DETAIL</td><td>JWT auth with bcrypt password hashing, monthly/yearly reports, category breakdowns</td></tr>
+          </table>
+          <a class="card-link" href="https://github.com/samira-farhat/expense-tracker" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <p class="label" data-reveal>Skills</p>
+    <div class="chiprow" role="list" data-reveal>
+      <span class="chip" role="listitem">Python</span>
+      <span class="chip" role="listitem">MicroPython</span>
+      <span class="chip" role="listitem">JavaScript / TypeScript</span>
+      <span class="chip" role="listitem">React</span>
+      <span class="chip" role="listitem">Node.js / Express</span>
+      <span class="chip" role="listitem">MySQL</span>
+      <span class="chip" role="listitem">REST APIs</span>
+      <span class="chip" role="listitem">JWT authentication</span>
+      <span class="chip" role="listitem">Raspberry Pi Pico</span>
+      <span class="chip" role="listitem">UART / serial debugging</span>
+      <span class="chip" role="listitem">Sensor integration</span>
+      <span class="chip" role="listitem">ML classification</span>
+      <span class="chip" role="listitem">Breadboard prototyping</span>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <p class="label" data-reveal>Contact</p>
+    <div class="section-body" data-reveal>
+      <p>Open to internships, collaborations, or just talking through a wiring problem.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:mozbad03@gmail.com">Email me ↗</a>
+        <a class="btn" href="assets/Mohamed-Zabad-CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
+        <a class="btn" href="https://github.com/MohamedZabad" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/mohamed-zabad-338274195/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="hint">CV last updated August 2026.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Mohamed Zabad</span>
+  <span id="footer-year">&copy; 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
