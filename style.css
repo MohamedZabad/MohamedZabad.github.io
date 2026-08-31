@@ -456,6 +456,36 @@ table.spec tr:first-child td { border-top: none; }
   color: var(--muted);
   border-top: 1px solid var(--line);
 }
+.experience-card {
+  padding: 28px;
+}
+
+.experience-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.experience-head h3,
+.experience-head p {
+  margin: 0;
+}
+
+.experience-desc {
+  margin: 20px 0 0;
+  max-width: 900px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+  .experience-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
 
 /* Tablet */
 @media (max-width: 900px) {
