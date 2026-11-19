@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Zabad — Embedded &amp; Systems Engineering</title>
-<meta name="description" content="Portfolio of Mohamed Zabad — embedded systems, networking, and backend projects.">
+<title>Mohamed Zabad — Embedded &amp; Full-Stack Engineering</title>
+<meta name="description" content="Portfolio of Mohamed Zabad — embedded systems, full-stack TypeScript apps, and payment integrations.">
+<meta name="theme-color" content="#0b0c0f">
+<meta property="og:title" content="Mohamed Zabad — Embedded &amp; Full-Stack Engineering">
+<meta property="og:description" content="Embedded systems, full-stack TypeScript apps, and payment integrations.">
+<meta property="og:image" content="assets/profile4.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,91 +16,148 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <div class="glow glow-1" aria-hidden="true"></div>
 <div class="glow glow-2" aria-hidden="true"></div>
 
 <header class="topbar">
-  <span class="logo">MZ<span class="dot" aria-hidden="true"></span></span>
-  <nav>
+  <a class="logo" href="#top" aria-label="Back to top">MZ<span class="dot" aria-hidden="true"></span></a>
+  <nav aria-label="Sections">
     <a href="#about" data-nav="about">About</a>
+    <a href="#experience" data-nav="experience">Experience</a>
     <a href="#projects" data-nav="projects">Projects</a>
     <a href="#skills" data-nav="skills">Skills</a>
     <a href="#contact" data-nav="contact">Contact</a>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
   <section class="hero" id="top">
-    <div class="hero-id" data-reveal>
+    <div class="hero-id" data-enter style="--i:0">
       <div class="avatar">
         <img src="assets/profile4.jpeg" alt="Mohamed Zabad">
       </div>
       <div class="hero-heading">
-        <p class="eyebrow">Student &mdash; embedded systems &amp; networking</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Open to internships &amp; junior roles</p>
         <h1>Mohamed Zabad</h1>
       </div>
     </div>
-    <p class="hero-sub" data-reveal>Building things that talk to hardware and to each other &mdash; from a Pico reading the air to full-stack apps built with a team.</p>
-    <div class="hero-links" data-reveal>
+    <p class="hero-sub" data-enter style="--i:1">Embedded and full-stack developer. I build things that talk to hardware and to each other &mdash; from a Pico reading the air to TypeScript apps that scan inboxes, match lost items, and move money.</p>
+    <div class="hero-links" data-enter style="--i:2">
       <a class="btn btn-primary" href="#projects">View projects</a>
       <a class="btn" href="assets/Mohamed-Zabad-CV.pdf" target="_blank" rel="noopener">Download CV ↗</a>
       <a class="btn" href="https://github.com/MohamedZabad" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn" href="https://www.linkedin.com/in/mohamed-zabad-338274195/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    <dl class="hero-stats" data-enter style="--i:3">
+      <div><dt>Projects</dt><dd>8</dd></div>
+      <div><dt>Internships</dt><dd>2</dd></div>
+      <div><dt>Focus</dt><dd>Embedded · Full-stack</dd></div>
+    </dl>
   </section>
 
   <section class="section" id="about">
-    <p class="label" data-reveal>About</p>
-    <div class="section-body" data-reveal>
+    <div class="section-head">
+      <p class="label">About</p>
+      <h2>Learning by wiring things up</h2>
+    </div>
+    <div class="section-body">
       <p>I'm a university student who learns by wiring things up and breaking them on purpose. Most of my work sits at the point where software meets something physical or something else on the network &mdash; a sensor on a breadboard, a socket between two machines, a model doing the boring part of a job.</p>
       <p>I like projects with a real feedback loop: flash the firmware, watch the serial monitor, fix the wiring, try again. Below is a working log of what that's produced so far.</p>
     </div>
   </section>
-  <section id="experience" class="experience">
-  <div class="section-head" data-reveal>
-    <p class="eyebrow">EXPERIENCE</p>
-    <h2>Professional Experience</h2>
-  </div>
 
-  <div class="experience-grid">
+  <section class="section" id="experience">
+    <div class="section-head">
+      <p class="label">Experience</p>
+      <h2>Professional experience</h2>
+    </div>
 
-    <article class="experience-card" data-reveal>
-      <div class="experience-head">
-        <h3>Development Intern</h3>
-        <p>Simigo AI / Protel &mdash; August 2026 &ndash; October 2026</p>
-      </div>
+    <ol class="timeline">
+      <li class="experience-card">
+        <div class="experience-head">
+          <div>
+            <h3>Development Intern</h3>
+            <p class="experience-org">Simigo AI / Protel</p>
+          </div>
+          <span class="date-tag">Aug 2026 &ndash; Oct 2026</span>
+        </div>
+        <p class="experience-desc">Full-stack web development with Node.js, TypeScript, Express, and React. Contributed to an expense tracking application and Simigo's payment hub, integrating and testing payment methods including Blue Wallet and CyberSource card payments. Worked with REST APIs, frontend-backend integration, payment flows, debugging, and responsive user interfaces.</p>
+      </li>
 
-      <p class="experience-desc">
-        Working on full-stack web development using Node.js, TypeScript, Express, and React. Contributed to an expense tracking application and Simigo's payment hub, integrating and testing payment methods including Blue Wallet and Cybersource card payments. Worked with REST APIs, frontend-backend integration, payment flows, debugging, and responsive user interfaces.
-      </p>
-    </article>
-
-    <article class="experience-card" data-reveal>
-      <div class="experience-head">
-        <h3>Intern</h3>
-        <p>eQuality Solutions &mdash; February 2026 &ndash; May 2026</p>
-      </div>
-
-      <p class="experience-desc">
-        Worked with data science and development teams on image-based machine learning tasks. Assisted with image data collection and cleaning, supported model training and performance analysis, and helped identify underperforming SKUs while collaborating across technical teams.
-      </p>
-    </article>
-
-  </div>
-</section>
+      <li class="experience-card">
+        <div class="experience-head">
+          <div>
+            <h3>Intern</h3>
+            <p class="experience-org">eQuality Solutions</p>
+          </div>
+          <span class="date-tag">Feb 2026 &ndash; May 2026</span>
+        </div>
+        <p class="experience-desc">Worked with data science and development teams on image-based machine learning tasks. Assisted with image data collection and cleaning, supported model training and performance analysis, and helped identify underperforming SKUs while collaborating across technical teams.</p>
+      </li>
+    </ol>
+  </section>
 
   <section class="section" id="projects">
-    <p class="label" data-reveal>Projects</p>
+    <div class="section-head">
+      <p class="label">Projects</p>
+      <h2>Selected work</h2>
+    </div>
 
     <div class="cards">
 
-      <article class="card" data-reveal data-expandable>
-        <img class="card-img" src="assets/screenshots/payment-gateway-screenshot.png" alt="Payment method selection screen with PayPal, Blue, Blue Card, and other payment options" loading="lazy">
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/digital-graveyard-art.svg" alt="Digital Graveyard interface with a digital aging score of 62, monthly spend, and tombstones for forgotten, cancelled and deleted accounts" loading="lazy"></div>
         <div class="card-summary">
-          <h3>Payment Gateway Integration</h3>
-          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+          <div>
+            <span class="badge">New</span>
+            <h3>Digital Graveyard</h3>
+            <ul class="tags"><li>TypeScript</li><li>React</li><li>MongoDB</li><li>Gmail API</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">Finds the accounts and subscriptions you forgot about, shows what they cost, and guides you through cleaning them up. It scans only the <em>headers</em> of account-related emails in Gmail (read-only) to detect services, shows the evidence behind each one, and never overwrites the status, cost or notes you set yourself.</p>
+          <table class="spec">
+            <tr><td>STACK</td><td>TypeScript, React + Vite, Node.js, Express, MongoDB (Mongoose)</td></tr>
+            <tr><td>AUTH</td><td>Google OAuth 2.0 with CSRF state, refresh tokens encrypted with AES-256-GCM, JWT in an httpOnly cookie</td></tr>
+            <tr><td>DETAIL</td><td>Rule-based service detection, spend &amp; savings analytics, renewal reminders, 0&ndash;100 digital aging score, cleanup wizard, multi-inbox, CSV export, unit tests</td></tr>
+          </table>
+          <a class="card-link" href="https://github.com/MohamedZabad/digital-graveyard" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/lost-and-found-art.svg" alt="Lost and Found map with a lost pin and a found pin linked by a dashed line, next to an 88 percent match breakdown by description, colour, location, date and category" loading="lazy"></div>
+        <div class="card-summary">
+          <div>
+            <span class="badge">New</span>
+            <h3>Lost &amp; Found Internet</h3>
+            <ul class="tags"><li>TypeScript</li><li>React</li><li>MongoDB geo</li><li>Leaflet</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">Report something you lost or found and a matching engine ranks likely matches &mdash; and explains <em>why</em> each one matched. It scores description, colour &amp; brand, location, date and category, with semantic search that folds synonyms into concepts ("billfold" finds "wallet"). Owners must answer a question about a private detail before any contact happens.</p>
+          <table class="spec">
+            <tr><td>STACK</td><td>TypeScript, React + Vite, Node.js, Express, MongoDB (2dsphere), Leaflet / OpenStreetMap</td></tr>
+            <tr><td>MATCHING</td><td>Hashed 256-dim concept vectors + cosine similarity, RGB colour families, haversine distance; true match ranked first 97% of the time on the test set</td></tr>
+            <tr><td>DETAIL</td><td>Ownership verification &amp; disputes, private chat, email alerts, map view, admin moderation, EXIF-stripped photos, English / French / Arabic UI</td></tr>
+          </table>
+          <p class="card-note">Repository is private for now &mdash; happy to demo it or walk through the matching engine on request.</p>
+        </div>
+      </article>
+
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/screenshots/payment-gateway-screenshot.png" alt="Payment method selection screen with PayPal, Blue, Blue Card, and other payment options" loading="lazy"></div>
+        <div class="card-summary">
+          <div>
+            <h3>Payment Gateway Integration</h3>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>CyberSource</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
         </div>
         <div class="card-details">
           <p class="card-desc">Integrated the Blue Wallet, Blue Card, and PayPal payment options into Simigo's payment methods page, connecting the frontend checkout flow to backend APIs and the CyberSource payment gateway. Handled request/response validation, sandbox testing across success and failure paths, and UI work to keep every payment option visually consistent on the same page.</p>
@@ -109,11 +170,14 @@
         </div>
       </article>
 
-      <article class="card" data-reveal data-expandable>
-        <img class="card-img" src="assets/screenshots/simigo-wallet-web.png" alt="Simigo Wallet mobile app screen showing total balance, quick actions, and recent transactions" loading="lazy">
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/screenshots/simigo-wallet-web.png" alt="Simigo Wallet mobile app screen showing total balance, quick actions, and recent transactions" loading="lazy"></div>
         <div class="card-summary">
-          <h3>Simigo Wallet</h3>
-          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+          <div>
+            <h3>Simigo Wallet</h3>
+            <ul class="tags"><li>Flutter</li><li>Node.js</li><li>MongoDB</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
         </div>
         <div class="card-details">
           <p class="card-desc">Backend and integration work for a digital wallet mobile app &mdash; authentication, wallet balance handling, money transfers, transaction history, and saved-card management, connected to a Flutter frontend. Also integrated an in-app webview and PayPal payment flow so users can top up their wallet without leaving the app.</p>
@@ -126,11 +190,14 @@
         </div>
       </article>
 
-      <article class="card" data-reveal data-expandable>
-        <img class="card-img" src="assets/art/vape-monitor-art.svg" alt="Stylized illustration of the vape detection sensor showing a sensor chip, radar pulse, and a console readout confirming vape detected at 92 percent confidence" loading="lazy">
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/vape-monitor-art.svg" alt="Stylized illustration of the vape detection sensor showing a sensor chip, radar pulse, and a console readout confirming vape detected at 92 percent confidence" loading="lazy"></div>
         <div class="card-summary">
-          <h3>Vape detection sensor</h3>
-          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+          <div>
+            <h3>Vape detection sensor</h3>
+            <ul class="tags"><li>MicroPython</li><li>Pico</li><li>ML</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
         </div>
         <div class="card-details">
           <p class="card-desc">A Raspberry Pi Pico rig that reads particulate matter, gas resistance, temperature, humidity, and pressure, then feeds those readings into a machine-learning classifier that flags vape, smoke, or spray in real time with a confidence score.</p>
@@ -143,51 +210,34 @@
         </div>
       </article>
 
-<article class="card" data-reveal data-expandable>
-  <img class="card-img" src="assets/art/game-hub-art.svg" alt="Stylized illustration of the GameHub interface with a search bar and a grid of colorful game tiles" loading="lazy">
-
-  <div class="card-summary">
-    <h3>GameHub</h3>
-    <button class="read-more" type="button">
-      Read more <span class="chevron">↓</span>
-    </button>
-  </div>
-
-  <div class="card-details">
-    <p class="card-desc">
-      A full-stack game discovery platform for finding games that can be played or claimed for free. Browse and search free-to-play titles, discover limited-time giveaways for normally paid games, view detailed game information, and save games to a wishlist. Built with a React frontend and Express backend using live game data from FreeToGame and GamerPower.
-    </p>
-
-```
-<table class="spec">
-  <tr>
-    <td>STACK</td>
-    <td>React, React Router, Node.js, Express</td>
-  </tr>
-  <tr>
-    <td>DATA</td>
-    <td>FreeToGame API, GamerPower API</td>
-  </tr>
-  <tr>
-    <td>DETAIL</td>
-    <td>Game search, platform filtering, free-to-play catalog, limited-time giveaways, game details, wishlist, direct play and claim links</td>
-  </tr>
-</table>
-
-<a class="card-link" href="https://github.com/MohamedZabad/GameHub" target="_blank" rel="noopener">
-  View repo ↗
-</a>
-```
-
-  </div>
-</article>
-
-
-      <article class="card" data-reveal data-expandable>
-        <img class="card-img" src="assets/art/expense-tracker-art.svg" alt="Stylized illustration of the expense tracker dashboard with income, expenses, and balance cards, a bar chart, and category tags" loading="lazy">
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/game-hub-art.svg" alt="Stylized illustration of the GameHub interface with a search bar and a grid of colorful game tiles" loading="lazy"></div>
         <div class="card-summary">
-          <h3>Expense tracker</h3>
-          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+          <div>
+            <h3>GameHub</h3>
+            <ul class="tags"><li>React</li><li>Express</li><li>REST APIs</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
+        </div>
+        <div class="card-details">
+          <p class="card-desc">A full-stack game discovery platform for finding games that can be played or claimed for free. Browse and search free-to-play titles, discover limited-time giveaways for normally paid games, view detailed game information, and save games to a wishlist.</p>
+          <table class="spec">
+            <tr><td>STACK</td><td>React, React Router, Node.js, Express</td></tr>
+            <tr><td>DATA</td><td>FreeToGame API, GamerPower API</td></tr>
+            <tr><td>DETAIL</td><td>Game search, platform filtering, free-to-play catalog, limited-time giveaways, game details, wishlist, direct play and claim links</td></tr>
+          </table>
+          <a class="card-link" href="https://github.com/MohamedZabad/GameHub" target="_blank" rel="noopener">View repo ↗</a>
+        </div>
+      </article>
+
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/expense-tracker-art.svg" alt="Stylized illustration of the expense tracker dashboard with income, expenses, and balance cards, a bar chart, and category tags" loading="lazy"></div>
+        <div class="card-summary">
+          <div>
+            <h3>Expense tracker</h3>
+            <ul class="tags"><li>TypeScript</li><li>MySQL</li><li>React</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
         </div>
         <div class="card-details">
           <p class="card-desc">A full-stack expense tracker built with a small team &mdash; users log in, add and edit income/expense transactions, and see their spending broken down by category, month, and year on a dashboard with charts.</p>
@@ -200,11 +250,14 @@
         </div>
       </article>
 
-      <article class="card" data-reveal data-expandable>
-        <img class="card-img" src="assets/art/ecommerce-art.svg" alt="E-commerce store website with product listings, shopping cart, checkout, and admin product management" loading="lazy">
+      <article class="card" data-expandable>
+        <div class="card-media"><img class="card-img" src="assets/art/ecommerce-art.svg" alt="E-commerce store website with product listings, shopping cart, checkout, and admin product management" loading="lazy"></div>
         <div class="card-summary">
-          <h3>E-commerce store</h3>
-          <button class="read-more" type="button">Read more <span class="chevron">↓</span></button>
+          <div>
+            <h3>E-commerce store</h3>
+            <ul class="tags"><li>PHP</li><li>MySQL</li><li>PDO</li></ul>
+          </div>
+          <button class="read-more" type="button" aria-expanded="false">Read more <span class="chevron" aria-hidden="true">↓</span></button>
         </div>
         <div class="card-details">
           <p class="card-desc">A full-stack e-commerce store built with PHP and MySQL &mdash; users can browse products, add items to their cart, and place orders, while admins can manage products, upload images, and view customer orders.</p>
@@ -221,27 +274,67 @@
   </section>
 
   <section class="section" id="skills">
-    <p class="label" data-reveal>Skills</p>
-    <div class="chiprow" role="list" data-reveal>
-      <span class="chip" role="listitem">Python</span>
-      <span class="chip" role="listitem">MicroPython</span>
-      <span class="chip" role="listitem">JavaScript / TypeScript</span>
-      <span class="chip" role="listitem">React</span>
-      <span class="chip" role="listitem">Node.js / Express</span>
-      <span class="chip" role="listitem">MySQL</span>
-      <span class="chip" role="listitem">REST APIs</span>
-      <span class="chip" role="listitem">JWT authentication</span>
-      <span class="chip" role="listitem">Raspberry Pi Pico</span>
-      <span class="chip" role="listitem">UART / serial debugging</span>
-      <span class="chip" role="listitem">Sensor integration</span>
-      <span class="chip" role="listitem">ML classification</span>
-      <span class="chip" role="listitem">Breadboard prototyping</span>
+    <div class="section-head">
+      <p class="label">Skills</p>
+      <h2>Tools I work with</h2>
+    </div>
+
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="chiprow">
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" width="18" height="18">TypeScript</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="18" height="18">JavaScript</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="18" height="18">Python / MicroPython</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="18" height="18">PHP</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="" width="18" height="18">Dart</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Web &amp; backend</h3>
+        <ul class="chiprow">
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="18" height="18">React</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="" width="18" height="18">Vite</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="18" height="18">Node.js / Express</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="" width="18" height="18">Flutter</li>
+          <li class="chip">REST APIs</li>
+          <li class="chip">OAuth 2.0 / JWT</li>
+          <li class="chip">Payment gateways</li>
+          <li class="chip">Leaflet maps</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Data &amp; tooling</h3>
+        <ul class="chiprow">
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="18" height="18">MongoDB</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="18" height="18">MySQL</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" width="18" height="18">Docker</li>
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="18" height="18">Git</li>
+          <li class="chip">Unit testing</li>
+          <li class="chip">ML classification</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Hardware</h3>
+        <ul class="chiprow">
+          <li class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" alt="" width="18" height="18">Raspberry Pi Pico</li>
+          <li class="chip">UART / serial debugging</li>
+          <li class="chip">Sensor integration</li>
+          <li class="chip">Breadboard prototyping</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section" id="contact">
-    <p class="label" data-reveal>Contact</p>
-    <div class="section-body" data-reveal>
+    <div class="section-head">
+      <p class="label">Contact</p>
+      <h2>Let's build something</h2>
+    </div>
+    <div class="section-body">
       <p>Open to internships, collaborations, or just talking through a wiring problem.</p>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:mozbad03@gmail.com">Email me ↗</a>
@@ -257,7 +350,7 @@
 
 <footer class="foot">
   <span>Mohamed Zabad</span>
-  <span id="footer-year">&copy; 2026</span>
+  <span>Icons by <a href="https://devicon.dev" target="_blank" rel="noopener">Devicon</a> · <span id="footer-year">&copy; 2026</span></span>
 </footer>
 
 <script src="script.js"></script>

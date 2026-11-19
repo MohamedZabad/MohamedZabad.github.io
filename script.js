@@ -1,45 +1,45 @@
-const year = new Date().getFullYear();
-
 const footerYear = document.getElementById('footer-year');
-if (footerYear) footerYear.textContent = `© ${year}`;
+if (footerYear) footerYear.textContent = `© ${new Date().getFullYear()}`;
 
-// Scroll-reveal animations
-const revealEls = document.querySelectorAll('[data-reveal]');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if (prefersReducedMotion) {
-  revealEls.forEach(el => el.classList.add('in-view'));
-} else if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-  revealEls.forEach(el => revealObserver.observe(el));
-} else {
-  revealEls.forEach(el => el.classList.add('in-view'));
-}
+// Top bar gets a border once the page scrolls
+const topbar = document.querySelector('.topbar');
+const onScroll = () => topbar && topbar.classList.toggle('scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 // Expandable project cards
 document.querySelectorAll('[data-expandable]').forEach(card => {
-  const toggle = () => card.classList.toggle('expanded');
+  const details = card.querySelector('.card-details');
+  const btn = card.querySelector('.read-more');
+
+  // Wrap the details in one inner element so the grid-rows animation works
+  if (details && !details.querySelector('.card-details-inner')) {
+    const inner = document.createElement('div');
+    inner.className = 'card-details-inner';
+    while (details.firstChild) inner.appendChild(details.firstChild);
+    details.appendChild(inner);
+  }
+
+  const setExpanded = (open) => {
+    card.classList.toggle('expanded', open);
+    if (btn) {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.firstChild.textContent = open ? 'Show less ' : 'Read more ';
+    }
+  };
+  const toggle = () => setExpanded(!card.classList.contains('expanded'));
 
   card.addEventListener('click', (e) => {
-    // Let the repo link navigate normally without toggling the card
-    if (e.target.closest('.card-link')) return;
+    // Links and text selection inside the details shouldn't toggle the card
+    if (e.target.closest('a')) return;
+    if (card.classList.contains('expanded') && e.target.closest('.card-details')) return;
     toggle();
   });
 
-  const btn = card.querySelector('.read-more');
   if (btn) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggle();
-      btn.firstChild.textContent = card.classList.contains('expanded') ? 'Show less ' : 'Read more ';
     });
   }
 });
@@ -53,12 +53,8 @@ const sections = Array.from(navLinks)
 if ('IntersectionObserver' in window && sections.length) {
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      const link = document.querySelector(`.topbar nav a[data-nav="${entry.target.id}"]`);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
+      if (!entry.isIntersecting) return;
+      navLinks.forEach(l => l.classList.toggle('active', l.dataset.nav === entry.target.id));
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
 

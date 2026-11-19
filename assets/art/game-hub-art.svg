@@ -1,7 +1,7 @@
 <svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b0e1a"/>
+      <stop offset="0%" stop-color="#0d1014"/>
       <stop offset="100%" stop-color="#08080d"/>
     </linearGradient>
     <radialGradient id="glowG1" cx="50%" cy="50%" r="50%">
@@ -9,12 +9,12 @@
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowG2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#f5a524" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f5a524" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="tile1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#4c2f9e"/>
+      <stop offset="0%" stop-color="#f5a524"/>
+      <stop offset="100%" stop-color="#a4620a"/>
     </linearGradient>
     <linearGradient id="tile2" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#22d3ee"/>
@@ -35,7 +35,7 @@
   <circle cx="150" cy="560" r="300" fill="url(#glowG2)"/>
 
   <!-- search bar -->
-  <rect x="90" y="80" width="480" height="56" rx="28" fill="#12101e" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1.5"/>
+  <rect x="90" y="80" width="480" height="56" rx="28" fill="#12151b" stroke="#f5a524" stroke-opacity="0.5" stroke-width="1.5"/>
   <circle cx="126" cy="108" r="9" fill="none" stroke="#8d8da3" stroke-width="2.5"/>
   <line x1="133" y1="115" x2="141" y2="123" stroke="#8d8da3" stroke-width="2.5" stroke-linecap="round"/>
   <text x="156" y="114" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#6d6d80">Search for a game...</text>

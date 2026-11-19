@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1014"/>
+      <stop offset="100%" stop-color="#08090c"/>
+    </linearGradient>
+    <radialGradient id="gC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5a524" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f5a524" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0 H0 V48" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- map area -->
+  <g>
+    <rect x="0" y="0" width="700" height="675" fill="#0f1318"/>
+    <rect x="0" y="0" width="700" height="675" fill="url(#grid)"/>
+    <!-- park / blocks -->
+    <rect x="70" y="80" width="200" height="140" rx="10" fill="#14251f"/>
+    <rect x="330" y="300" width="230" height="160" rx="10" fill="#161b22"/>
+    <rect x="80" y="420" width="180" height="170" rx="10" fill="#161b22"/>
+    <rect x="420" y="70" width="220" height="150" rx="10" fill="#161b22"/>
+    <!-- roads -->
+    <path d="M-20 270 C200 250 420 300 720 240" fill="none" stroke="#232a33" stroke-width="26"/>
+    <path d="M300 -20 C320 200 270 420 310 700" fill="none" stroke="#232a33" stroke-width="22"/>
+    <path d="M-20 520 C220 500 500 560 720 500" fill="none" stroke="#1d232b" stroke-width="14"/>
+    <text x="96" y="160" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#4f8a72">Campus green</text>
+    <text x="440" y="150" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#5b6472">Library</text>
+
+    <!-- radius -->
+    <circle cx="470" cy="190" r="150" fill="url(#gC)"/>
+    <circle cx="470" cy="190" r="150" fill="none" stroke="#22d3ee" stroke-opacity="0.35" stroke-dasharray="6 8"/>
+
+    <!-- link between pins -->
+    <path d="M200 380 Q330 250 470 190" fill="none" stroke="#eef0f3" stroke-opacity="0.5" stroke-width="2.5" stroke-dasharray="4 8"/>
+
+    <!-- lost pin -->
+    <g transform="translate(200,380)">
+      <circle r="44" fill="url(#gA)"/>
+      <path d="M0 0 C-22 -30 -22 -62 0 -62 C22 -62 22 -30 0 0 Z" fill="#f5a524"/>
+      <circle cx="0" cy="-42" r="8" fill="#0d1014"/>
+      <rect x="-40" y="12" width="80" height="26" rx="13" fill="#0d1014" stroke="#f5a524" stroke-opacity="0.6"/>
+      <text x="0" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#f5a524">LOST</text>
+    </g>
+    <!-- found pin -->
+    <g transform="translate(470,190)">
+      <path d="M0 0 C-22 -30 -22 -62 0 -62 C22 -62 22 -30 0 0 Z" fill="#22d3ee"/>
+      <circle cx="0" cy="-42" r="8" fill="#0d1014"/>
+      <rect x="-46" y="12" width="92" height="26" rx="13" fill="#0d1014" stroke="#22d3ee" stroke-opacity="0.6"/>
+      <text x="0" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#22d3ee">FOUND</text>
+    </g>
+  </g>
+
+  <circle cx="1100" cy="620" r="260" fill="url(#gA)"/>
+
+  <!-- match panel -->
+  <g transform="translate(740,70)">
+    <rect width="400" height="535" rx="22" fill="#12151b" stroke="#ffffff" stroke-opacity="0.09"/>
+    <text x="30" y="48" font-family="JetBrains Mono, monospace" font-size="14" fill="#8b93a1">LIKELY MATCH</text>
+    <text x="30" y="96" font-family="Space Grotesk, sans-serif" font-size="54" font-weight="700" fill="#eef0f3">88%</text>
+    <rect x="160" y="64" width="110" height="30" rx="15" fill="#22c55e" fill-opacity="0.16"/>
+    <text x="215" y="84" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#4ade80">Strong</text>
+
+    <text x="30" y="142" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#eef0f3">Black leather wallet</text>
+    <text x="30" y="166" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#8b93a1">↔ Dark brown billfold</text>
+
+    <line x1="30" y1="190" x2="370" y2="190" stroke="#ffffff" stroke-opacity="0.08"/>
+
+    <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#8b93a1">
+      <text x="30" y="226">Description</text>
+      <rect x="30" y="236" width="340" height="8" rx="4" fill="#232831"/>
+      <rect x="30" y="236" width="306" height="8" rx="4" fill="#22d3ee"/>
+
+      <text x="30" y="278">Colour &amp; brand</text>
+      <rect x="30" y="288" width="340" height="8" rx="4" fill="#232831"/>
+      <rect x="30" y="288" width="255" height="8" rx="4" fill="#22d3ee"/>
+
+      <text x="30" y="330">Location</text>
+      <rect x="30" y="340" width="340" height="8" rx="4" fill="#232831"/>
+      <rect x="30" y="340" width="320" height="8" rx="4" fill="#22d3ee"/>
+
+      <text x="30" y="382">Date</text>
+      <rect x="30" y="392" width="340" height="8" rx="4" fill="#232831"/>
+      <rect x="30" y="392" width="290" height="8" rx="4" fill="#22d3ee"/>
+
+      <text x="30" y="434">Category</text>
+      <rect x="30" y="444" width="340" height="8" rx="4" fill="#232831"/>
+      <rect x="30" y="444" width="340" height="8" rx="4" fill="#22d3ee"/>
+    </g>
+
+    <rect x="30" y="478" width="340" height="38" rx="19" fill="#f5a524"/>
+    <text x="200" y="503" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="#0d1014">Verify ownership</text>
+  </g>
+</svg>
